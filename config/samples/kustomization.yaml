@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- racecourse_v1_racecourseapplication.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

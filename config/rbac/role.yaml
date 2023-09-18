@@ -1,0 +1,50 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - services
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - services/status
+  verbs:
+  - get
+- apiGroups:
+  - racecourse.my.domain
+  resources:
+  - racecourseapplications
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - racecourse.my.domain
+  resources:
+  - racecourseapplications/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - racecourse.my.domain
+  resources:
+  - racecourseapplications/status
+  verbs:
+  - get
+  - patch
+  - update

@@ -1,0 +1,12 @@
+apiVersion: racecourse.my.domain/v1
+kind: RacecourseApplication
+metadata:
+  labels:
+    app.kubernetes.io/name: racecourseapplication
+    app.kubernetes.io/instance: racecourseapplication-sample
+    app.kubernetes.io/part-of: racecourse-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: racecourse-operator
+  name: racecourseapplication-sample
+spec:
+  # TODO(user): Add fields here
